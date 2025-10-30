@@ -150,3 +150,11 @@ importers:
     dependencies: {}
     devDependencies: {}
 packages: {}
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
