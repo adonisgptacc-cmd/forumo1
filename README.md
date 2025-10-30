@@ -45,6 +45,17 @@ forumo/
    pnpm build
    ```
 
+## CI lockfile workflow
+
+The CI pipeline expects a committed `pnpm-lock.yaml`. If dependency versions change, regenerate and commit the lockfile with:
+
+```bash
+pnpm install
+git add pnpm-lock.yaml
+git commit -m "Add pnpm-lock.yaml for CI"
+git push
+```
+
 ## Documentation
 
 The project roadmap is captured in `docs/` (coming soon) and aligns with the staged delivery plan outlined in the product brief.
