@@ -6,13 +6,13 @@ import { HomeScreen } from './home-screen.tsx';
 describe('HomeScreen', () => {
   it('renders hero headline', () => {
     render(
-      <MemoryRouter initialEntries={["/"]}>
+      <MemoryRouter>
         <HomeScreen />
       </MemoryRouter>,
     );
 
     expect(
-      screen.getByRole('heading', { name: /Build trust-first marketplaces with Forumo/i }),
+      screen.getByText('Build trust-first marketplaces with Forumo'),
     ).toBeInTheDocument();
   });
 });
