@@ -1,0 +1,19 @@
+{
+  "name": "forumo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Forumo marketplace monorepo",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r --if-present run build",
+    "dev": "pnpm --filter web dev",
+    "lint": "pnpm -r --if-present run lint",
+    "test": "pnpm -r --if-present run test",
+    "format": "pnpm -r --if-present run format"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "pnpm@10.13.1"
+}
