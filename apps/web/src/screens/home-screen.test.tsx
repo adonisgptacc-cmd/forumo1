@@ -1,18 +1,16 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
+import { renderToString } from 'react-dom/server';
 import { HomeScreen } from './home-screen.tsx';
 
 describe('HomeScreen', () => {
   it('renders hero headline', () => {
-    render(
-      <MemoryRouter>
+    const markup = renderToString(
+      <StaticRouter location="/">
         <HomeScreen />
-      </MemoryRouter>,
+      </StaticRouter>,
     );
 
-    expect(
-      screen.getByText('Build trust-first marketplaces with Forumo'),
-    ).toBeInTheDocument();
+    expect(markup).toContain('Build trust-first marketplaces with Forumo');
   });
 });
